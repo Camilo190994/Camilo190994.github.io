@@ -1,0 +1,204 @@
+/* Estilo general del body */
+body {
+    background-color: #3F4452; /* Color de fondo oscuro */
+    overflow: auto; /* Permite el desplazamiento si el contenido desborda */
+    padding: 0; /* Sin relleno alrededor del body */
+}
+
+/* Estilo para el título principal */
+#encabezado h1 {
+    margin: 1px 0; /* Reducir el margen superior e inferior del título */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del título */
+    font-weight: 250; /* Peso de la fuente más ligero */
+}
+
+/* Estilo para las líneas horizontales (hr) */
+#encabezado .ajuste-hr {
+    height: 3px; /* Altura de la línea horizontal */
+    background-color: white; /* Color de la línea horizontal */
+    border: none; /* Eliminar el borde predeterminado */
+    margin: 1px 0; /* Reducir el margen superior e inferior */
+    width: 100%; /* Ajustar el ancho al 100% del contenedor */
+    max-width: 300px; /* Ancho máximo de la línea horizontal */
+}
+
+/* Estilo para el contenedor de encabezado */
+#encabezado {
+    display: flex; /* Utilizar flexbox para el diseño del contenedor */
+    flex-direction: column; /* Organizar los elementos en una columna */
+    align-items: flex-end; /* Alinear los elementos al final del contenedor (derecha) */
+    padding: 0 10px; /* Agregar relleno para asegurar que el contenido no toque los bordes */
+    align-self: flex-end; /* Alinear el contenedor al final de su padre */
+    background-image: url(img/mejores-fondos-tecnologia.png); /* Imagen de fondo */
+    background-size: cover; /* Cubrir todo el contenedor con la imagen de fondo */
+    color: white; /* Color del texto dentro del encabezado */
+    overflow: hidden; /* Ocultar el contenido que desborda el contenedor */
+}
+
+/* Estilo para la imagen dentro del encabezado */
+#encabezado img {
+    position: absolute; /* Posiciona la imagen de manera absoluta dentro del contenedor */
+    top: 0; /* Alinea la imagen al borde superior del contenedor */
+    left: 0; /* Alinea la imagen al borde izquierdo del contenedor */
+    width: 157px; /* Ajusta el ancho de la imagen según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 8px; /* Ajusta el espacio alrededor de la imagen si es necesario */
+}
+
+/* Estilo para la imagen en general */
+#botonimg {
+    transform-origin: bottom left; /* Establece el origen de la transformación en la esquina inferior izquierda */
+    filter: grayscale(100%); /* Aplica filtro en blanco y negro a la imagen */
+    transition: filter 1s ease, transform 1s ease; /* Suaviza el cambio de filtro y tamaño */
+    display: block; /* Hace que la imagen sea un bloque */
+}
+
+#botonimg.expanded {
+    filter: grayscale(50%); /* Vuelve a su color original al pasar el mouse */
+    transform: scale(1.2); /* Aumenta el tamaño de la imagen al 120% */
+}
+
+#botonimg:hover {
+    filter: grayscale(50%) drop-shadow(10px -10px 10px rgba(0, 0, 0, 0.733)); /* Aplica escala de grises y sombra al pasar el mouse */
+}
+
+/* Estilo para el párrafo */
+p {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del párrafo */
+    font-weight: 250; /* Peso de la fuente más ligero */
+}
+
+/* Estilo para el párrafo con clase .sombra */
+.sombra {
+    color: white; /* Color del texto */
+    transition: color 2s, text-shadow 0.3s; /* Transiciones suaves para color y sombra de texto */
+}
+
+.sombra:hover {
+    color: black; /* Cambia el color del texto al pasar el mouse */
+    text-shadow: 0 0 3px white, 0 0 3px white, 0 0 3px white; /* Aplica sombra blanca al texto */
+}
+
+/* Estilo para el párrafo oculto */
+.hidden {
+    opacity: 0; /* Opacidad a 0 (invisible) */
+    transition: opacity 0s ease; /* Sin transición para el cambio de opacidad */
+}
+
+/* Estilo para mostrar el párrafo */
+.show {
+    opacity: 0.7; /* Hace el elemento más opaco */
+    transition: opacity 2s ease; /* Transición suave para el cambio de opacidad */
+}
+
+/* Estilo para alinear el párrafo a la derecha de la imagen */
+#desplieguebotonimg {
+    position: absolute; /* Posiciona el elemento de manera absoluta dentro de su contenedor */
+    left: 220px; /* Desplaza el párrafo a la derecha de la imagen */
+    top: 0; /* Alinea el elemento con el borde superior del contenedor */
+    white-space: nowrap; /* Evita que el texto del párrafo se divida en varias líneas */
+    display: flex; /* Utiliza flexbox para el diseño */
+    flex-direction: column; /* Organiza los elementos en una columna */
+}
+
+/* Estilo para el título secundario */
+h2 {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del título secundario */
+    font-weight: 250; /* Peso de la fuente más ligero */
+}
+
+/* Estilo para los enlaces */
+a {
+    color: inherit; /* Utiliza el color del texto padre */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+#cuerpo {
+    background-image: url(img/fondo2.png); /* Color de fondo blanco con opacidad */
+    color: black; /* Color del texto */
+    width: 100%; /* Ancho del contenedor al 100% */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del cuerpo */
+    font-size: 10px; /* Tamaño de fuente */
+    left: 0; /* Desplazamiento hacia la izquierda */
+    margin-top: 15px; /* Margen superior */
+    align-self: flex-end; /* Alinear el contenedor al final de su padre */
+    background-size: cover; /* Cubrir todo el contenedor con la imagen de fondo */
+    overflow: visible; /* Permitir que el contenido que desborda sea visible */
+    position: relative;
+}
+
+.botoncue {
+    width: 120px; /* Ancho del botón */
+    height: auto; /* Altura automática para mantener la proporción */
+    transition: filter 0.3s ease; /* Suaviza el cambio de filtro */
+}
+
+.botoncue:hover {
+    filter: drop-shadow(8px 8px 8px rgb(255, 255, 255)); /* Aplica sombra al pasar el mouse */
+}
+
+/* Estilo para el contenedor de imágenes adicionales */
+#imagenesCuerpo {
+    display: flex; /* Utiliza flexbox para el diseño del contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    gap: 20px; /* Espacio entre las imágenes */
+    width: 100%; /* Ancho del contenedor al 100% */
+}
+
+/* Estilo para las imágenes dentro del contenedor */
+#imagenesCuerpo img {
+    width: 80px; /* Ancho de las imágenes */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/* Estilo para ocultar elementos */
+.hidden {
+    display: none; /* Oculta el elemento */
+}
+
+/* Estilo para mostrar elementos */
+.show {
+    display: flex; /* Muestra como un contenedor flex */
+}
+
+.imgsombra {
+    padding: 20px; /* Espaciado interno en celdas */
+    text-align: left; /* Alineación del texto a la izquierda */
+    transition: filter 0.3s ease;
+}
+
+.imgsombra:hover {
+    filter: drop-shadow(0 0 15px #ffffff) drop-shadow(0 0 3px #5eb2cc);
+}
+
+th {
+    font-family: Arial, Helvetica, sans-serif; /* Fuente del encabezado de la tabla */
+    font-size: 15px; /* Tamaño de fuente del encabezado */
+    color: white; /* Color del texto del encabezado */
+}
+
+.botoncue2 {
+    width: 120px; /* Ancho del botón */
+    height: auto; /* Altura automática para mantener la proporción */
+    transition: filter 0.3s ease; /* Suaviza el cambio de filtro */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.botoncue2:hover {
+    filter: drop-shadow(-8px 8px 8px rgb(255, 255, 255)); /* Aplica sombra al pasar el mouse */
+}
+
+.usuario {
+    width: 120px; /* Ancho del botón */
+    height: auto; /* Altura automática para mantener la proporción */
+    transition: filter 0.3s ease; /* Suaviza el cambio de filtro */
+    position: absolute;
+    top: 400px;
+    right: 450px;
+}
+
+.usuario:hover {
+    filter: drop-shadow(0 0 5px rgb(255, 255, 255));
+}
